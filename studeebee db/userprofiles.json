@@ -1,0 +1,103 @@
+[{
+  "_id": {
+    "$oid": "5ee9135a1c94c133043d98ae"
+  },
+  "userId": {
+    "$oid": "5ee8bd690de04e57a0c96c31"
+  },
+  "fullName": " Vivek Kumar Chaudhary",
+  "college": "Ramrao Adik Institute of Technology",
+  "phone": "8779250187",
+  "address": "Room No. Some Room",
+  "postcode": "410206",
+  "linkedin": "some link",
+  "facebook": "some other link",
+  "twitter": " twitter link",
+  "instagram": "instagram link",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5ee9e0ec552c41373cffefda"
+  },
+  "userId": {
+    "$oid": "5ee8becf105abc552c217943"
+  },
+  "fullName": "Chaudhary Vivek",
+  "college": "Amrita Vidyalayam",
+  "phone": "872313141341",
+  "address": "Some Address ",
+  "postcode": " 2016412",
+  "linkedin": " LinkedIn Link",
+  "facebook": "Facebook Link",
+  "twitter": "Twitter Link",
+  "instagram": "Instagram Link",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5ee9e0ec552c41373cffefde"
+  },
+  "userId": {
+    "$oid": "5ee8becf105abc552c217943"
+  },
+  "fullName": " ",
+  "college": " ",
+  "phone": " ",
+  "address": " ",
+  "postcode": " ",
+  "linkedin": " ",
+  "facebook": " ",
+  "twitter": " ",
+  "instagram": " ",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5ee9e0ec552c41373cffefdb"
+  },
+  "userId": {
+    "$oid": "5ee8becf105abc552c217943"
+  },
+  "fullName": " ",
+  "college": " ",
+  "phone": " ",
+  "address": " ",
+  "postcode": " ",
+  "linkedin": " ",
+  "facebook": " ",
+  "twitter": " ",
+  "instagram": " ",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5ee9e0ec552c41373cffefdc"
+  },
+  "userId": {
+    "$oid": "5ee8becf105abc552c217943"
+  },
+  "fullName": " ",
+  "college": " ",
+  "phone": " ",
+  "address": " ",
+  "postcode": " ",
+  "linkedin": " ",
+  "facebook": " ",
+  "twitter": " ",
+  "instagram": " ",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5ee9e0ec552c41373cffefdd"
+  },
+  "userId": {
+    "$oid": "5ee8becf105abc552c217943"
+  },
+  "fullName": " ",
+  "college": " ",
+  "phone": " ",
+  "address": " ",
+  "postcode": " ",
+  "linkedin": " ",
+  "facebook": " ",
+  "twitter": " ",
+  "instagram": " ",
+  "__v": 0
+}]

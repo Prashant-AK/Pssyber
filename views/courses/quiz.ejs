@@ -1,0 +1,18 @@
+<div class="ttr-wrapper">
+    <div class="container">
+        <div class="card">
+            <div  >
+                    <% for(var i=0; i<quiz.questions.length;i++) { %> 
+                        <ol class="">
+                            <li class="form-control"><b>   <%=quiz.questions[i].question  %> </b></li>
+                            <li >    <input type="radio" name="option">  <%=quiz.questions[i].option1  %> </li>
+                            <li >    <input type="radio" name="option">  <%=quiz.questions[i].option2  %> </li>
+                            <li >    <input type="radio" name="option">  <%=quiz.questions[i].option3  %></li>
+                            <li >    <input type="radio" name="option">  <%=quiz.questions[i].option4  %></li>
+                        </ol>
+                    <% } %> 
+            </div>
+           
+        </div>
+    </div>
+</div>

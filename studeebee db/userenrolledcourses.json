@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "5ef9d323c9b93c31cc119102"
+  },
+  "wishlist": [
+    {
+      "$oid": "5ef5f0fd90fe39455cb508ed"
+    },
+    {
+      "$oid": "5ef62fec1b893025b88e509d"
+    }
+  ],
+  "enrolled": [
+    {
+      "$oid": "5ef5f0fd90fe39455cb508ed"
+    },
+    {
+      "$oid": "5ef62fec1b893025b88e509d"
+    }
+  ],
+  "user_id": {
+    "$oid": "5ee8bd690de04e57a0c96c31"
+  },
+  "__v": 5
+}]

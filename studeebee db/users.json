@@ -1,0 +1,32 @@
+[{
+  "_id": {
+    "$oid": "5ee8bd690de04e57a0c96c31"
+  },
+  "role": "student",
+  "isVerified": true,
+  "registerToken": null,
+  "username": "Vivek Kumar",
+  "email": "vkc369258@gmail.com",
+  "password": "vivek",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5ee8becf105abc552c217943"
+  },
+  "role": "student",
+  "isVerified": true,
+  "registerToken": "57",
+  "username": "Chaudhary",
+  "email": "vivekera50@gmail.com",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5ee8e86633a496574036e7d7"
+  },
+  "role": "student",
+  "isVerified": true,
+  "registerToken": "90",
+  "username": "swastik",
+  "email": "swastik605@gmail.com",
+  "__v": 0
+}]

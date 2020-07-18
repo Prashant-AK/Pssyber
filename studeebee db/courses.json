@@ -1,0 +1,117 @@
+[{
+  "_id": {
+    "$oid": "5ef5f0fd90fe39455cb508ed"
+  },
+  "prereq": [
+    "React Native Development",
+    "React Naive CLI",
+    "Industry Best Practices",
+    "Redux and Recoil development"
+  ],
+  "outcome": [
+    "React Native Development",
+    "React Naive CLI",
+    "Industry Best Practices",
+    "Redux and Recoil development"
+  ],
+  "content": [
+    {
+      "sectionTitle": "Section 1",
+      "sectionVideoTitle": [
+        "Intro To React",
+        "What is a CLI"
+      ],
+      "sectionVideoUrl": [
+        "https://studeebee.s3.ap-south-1.amazonaws.com/1593176269540-Nature+Prototype.mp4",
+        "https://studeebee.s3.ap-south-1.amazonaws.com/1593176269784-Travello+Prototype.mp4"
+      ]
+    },
+    {
+      "sectionTitle": "Section 2",
+      "sectionVideoTitle": [
+        "Exploring My First App",
+        "Working on Expo CLI"
+      ],
+      "sectionVideoUrl": [
+        "https://studeebee.s3.ap-south-1.amazonaws.com/1593176270022-Nature+Prototype.mp4",
+        "https://studeebee.s3.ap-south-1.amazonaws.com/1593176270297-Travello+Prototype.mp4"
+      ]
+    },
+    {
+      "sectionTitle": "Section 3",
+      "sectionVideoTitle": [
+        "Finishing up the course"
+      ],
+      "sectionVideoUrl": [
+        "https://studeebee.s3.ap-south-1.amazonaws.com/1593176270728-Travello+Prototype.mp4"
+      ]
+    }
+  ],
+  "approved": true,
+  "title": "FullStack React BootCamp 2020",
+  "instructor": "Michel Jackson",
+  "price": 599,
+  "discount": 25,
+  "category": "Development and Programming",
+  "level": "Intermidiate",
+  "language": "English",
+  "description": " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\r\n\r\n",
+  "thumbnail": "https://studeebee.s3.amazonaws.com/1593176269512-React-Native-Titre.png",
+  "createdAt": {
+    "$date": "2020-06-26T12:58:37.556Z"
+  },
+  "lastUpdatedAt": 1593518316904,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5ef62fec1b893025b88e509d"
+  },
+  "prereq": [
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. lorem Ipsum is simply dummy text of the printing and typesetting industry",
+    " Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. lorem Ipsum is simply dummy text of the printing and typesetting industry. "
+  ],
+  "outcome": [
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
+    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.",
+    "Learn Software Testing and Automation basics from a professional trainer from your own desk."
+  ],
+  "content": [
+    {
+      "sectionTitle": "Section 1",
+      "sectionVideoTitle": [
+        "Intro to react",
+        "Advanced React"
+      ],
+      "sectionVideoUrl": [
+        "https://studeebee.s3.ap-south-1.amazonaws.com/1593192390546-Nature+Prototype.mp4",
+        "https://studeebee.s3.ap-south-1.amazonaws.com/1593192391454-Travello+Prototype.mp4"
+      ]
+    },
+    {
+      "sectionTitle": "Section 2",
+      "sectionVideoTitle": [
+        "Intro"
+      ],
+      "sectionVideoUrl": [
+        "https://studeebee.s3.ap-south-1.amazonaws.com/1593192392492-Nature+Prototype.mp4"
+      ]
+    }
+  ],
+  "approved": false,
+  "title": "Full Stack Web Development",
+  "instructor": "Angela Yu",
+  "price": 450,
+  "discount": 30,
+  "category": "Science and Technology",
+  "level": "Beginner",
+  "language": "English",
+  "description": " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\r\n\r\n",
+  "thumbnail": "https://studeebee.s3.amazonaws.com/1593192390516-klarna-signs-deal-with-aws-1575354413.png",
+  "createdAt": {
+    "$date": "2020-06-26T17:27:08.677Z"
+  },
+  "lastUpdatedAt": 1593278147024,
+  "__v": 0
+}]
