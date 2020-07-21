@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from Studeebee.themetrades.com/demo/admin/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 29 May 2019 08:28:30 GMT -->
+
+<head>
+
+    <!-- META ============================================= -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="robots" content="" />
+
+    <!-- DESCRIPTION -->
+    <meta name="description" content="Studeebee : Education HTML Template" />
+
+    <!-- OG -->
+    <meta property="og:title" content="Studeebee : Education HTML Template" />
+    <meta property="og:description" content="Studeebee : Education HTML Template" />
+    <meta property="og:image" content="" />
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- FAVICONS ICON ============================================= -->
+    <link rel="icon" href="../error-404.html" type="image/x-icon" />
+    <link rel="shortcut icon" type="image/x-icon" href="admin/assets/images/favicon.png" />
+
+    <!-- PAGE TITLE HERE ============================================= -->
+    <title>Studeebee : Education HTML Template </title>
+
+    <!-- MOBILE SPECIFIC ============================================= -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/">
+
+    <!--[if lt IE 9]>
+        <script src="admin/assets/js/html5shiv.min.js"></script>
+        <script src="admin/assets/js/respond.min.js"></script>
+        <![endif]-->
+
+    <!-- All PLUGINS CSS ============================================= -->
+    <link rel="stylesheet" type="text/css" href="admin/assets/css/assets.css">
+    <link rel="stylesheet" type="text/css" href="admin/assets/vendors/calendar/fullcalendar.css">
+
+    <!-- TYPOGRAPHY ============================================= -->
+    <link rel="stylesheet" type="text/css" href="admin/assets/css/typography.css">
+
+    <!-- SHORTCODES ============================================= -->
+    <link rel="stylesheet" type="text/css" href="admin/assets/css/shortcodes/shortcodes.css">
+
+    <!-- STYLESHEETS ============================================= -->
+    <link rel="stylesheet" type="text/css" href="admin/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="admin/assets/css/dashboard.css">
+    <link class="skin" rel="stylesheet" type="text/css" href="admin/assets/css/color/color-1.css">
+
+    <!-- Cutom StyleSheet -->
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/lectures/courseLec.css">
+    <link rel="stylesheet" href="assets/css/lectures/sidebar-accordion.css">
+
+</head>
+
+<body>
+
+    <!-- header start -->
+    <%- include('../partials/user/user_nav'); -%>
+        <!-- header end -->
+
+
+        <!-- Left sidebar menu start -->
+        <%- include('../partials/user/user_sidebar'); -%>
+            <!-- Left sidebar menu end -->
+            <!-- Main Watching Area -->
+            <div class="row  contentlec">
+                <div class='col-md-9 no-gutters'>
+                    <h4>
+                        <%=course.title%>
+                    </h4>
+                    <!-- <h1>Header Portion --Replace Here --</h1> -->
+                    <video class="tab" id="video" controls>Your browser does not support the &lt;video&gt; tag.
+                        <source id="source_video" src="v1.mp4" type='video/mp4' />
+                   </video>
+
+                    <div style="margin: 2rem 0 0 0">
+                        <ul class="nav nav-tabs m-4" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Overview</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Q&A</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Notes</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="announcement-tab" data-toggle="tab" href="#announcement" role="tab" aria-controls="announcement" aria-selected="false">Announcement</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="resources-tab" data-toggle="tab" href="#resources" role="tab" aria-controls="resources" aria-selected="false">Resources</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content m-5" id="myTabContent">
+                            <div class="tab-pane fade show active " id="home" role="tabpanel" aria-labelledby="home-tab">
+
+                                <h5 style="font-weight: 500;">About this Course</h5>
+                                <p>
+                                    <%=course.description%>
+                                </p>
+
+                            </div>
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                <div class="question-list-question--question-wrapper--3qHzn m-5">
+                                    <div>
+                                        <div class="user-avatar user-avatar--initials" style="background-color: rgb(0, 87, 107); font-size: 15px; width: 36px;height: 50%;">
+                                            <div class="user-avatar__inner fx-c"><span class="user-initials">DV</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="question-list-question--info-container--YmB6x">
+                                        <a class="question-list-question--question-link-row--3lH3e" target="_self" href="#">
+                                            <div class="question-list-question--text-content--3FJpJ">
+                                                <div class="question-list-question--title--2Ctaz">the %s doesnt work</div>
+                                                <div class="question-list-question--body--1dw2Z" data-purpose="question-body">I tried the %s function on python 3.8 but it wont budge.</div>
+                                            </div>
+                                        </a>
+                                        <div class="font-text-xs"><a href="#" target="_blank" rel="noopener noreferrer">Dharmik</a> ·
+                                            <div class="item-link item-link--common--RP3fp item-link--default-theme--YqsPR" tabindex="0" role="link">Lecture 5</div> · <span>7 days ago</span></div>
+                                    </div>
+                                </div>
+                                <div class="m-5">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlTextarea1">Write Your Question</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                            <button type="button" class="btn  btn-outline-success" style="margin-top: 15px;">Publish</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                <div class="create-bookmark--create-bookmark-container--2XoIK" id="note_div">
+                                    <button type="button" id="btnnote" class="create-bookmark btn btn-outline-secondary">
+                                    <div class="create-bookmark--create-bookmark-button-text--2yp8l">
+                                        <div class="create-bookmark--create-button-left--1fPc9">
+                                        <span>Create a new note</span>
+                                    </div>
+                                        <span class="create-bookmark--create-button-right--11jki udi udi-plus-circle"></span>
+                                    </div>
+                                </button>
+                                </div>
+                                <form class="form_note">
+                                    <!-- <input type="button" id="bold" value="Bold" onclick="formatText ('b');" /><input type="button" id="italic" value="Italic" onclick="formatText('i');" /><br /> -->
+                                    <textarea id="format"></textarea><br />
+                                    <input type="button" class="btn btn-outline-dark" name="submit" id="cancelnote" value="Cancel" />
+                                    <input type="submit" class="btn btn-outline-info" name="submit" id="submitnote" value="Submit" />
+                                </form>
+                                <hr>
+                                <h3 style="color: #686f7a;">Notes list </h3>
+                                <div class="container m-5">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <p class="sectionname"> 4. off page optimization</p>
+                                            <p class="lecname">7. How to Build Authority with Backlinks</p>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <button type="submit" aria-label="Edit bookmark" class="editnote">
+                                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                            </button>
+                                            <button type="submit" aria-label="Delete bookmark" class="deletenote">
+                                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <p class="lecbookmark">
+                                            here is important topic
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="announcement" role="tabpanel" aria-labelledby="announcement-tab">
+                                <div class="row" style="margin: 5em">
+                                    <h3>Free Alternative to the Keywords Everywhere SEO tool</h3>
+                                    <p>Many of you were disappointed the Keywords Everywhere SEO tool (shown in lecture 3) was now a paid tool<br> The great news is a free alternative has just been released - Keywords Surfer. It works in the same way so
+                                        check out lecture 3 if you need a refresh.</p>
+                                    <p>new video :
+                                        <a href="https://youtu.be/EnxWDNXlF7Q">https://youtu.be/EnxWDNXlF7Q</a><br> p.s. thanks to student Connie for the tip on Keywords Surfer.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="resources" role="tabpanel" aria-labelledby="resources-tab">
+                                <h3>Download study material from here </h3>
+                                <div class="container" style="margin: 5em">
+                                    <div>
+                                        <div class="row" style="border-top: 1px solid black;">
+                                            <p>Section 1</p>
+                                        </div>
+                                        <div class="p-2">
+                                            <span>Lecture 1 : </span><a href="./directory/yourfile.pdf" download><i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;
+                                                  Introduction to SEO </a>
+                                        </div>
+                                        <div class="p-2">
+                                            <span>Lecture 2 : </span><a href="./directory/yourfile.pdf" download><i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;
+                                                  Introduction to SEO </a>
+                                        </div>
+                                        <br>
+                                    </div>
+                                    <div>
+                                        <div class="row" style="border-top: 1px solid black;">
+                                            <p>Section 2</p>
+                                        </div>
+                                        <div class="p-2">
+                                            <span>Lecture 1 : </span><a href="./directory/yourfile.pdf" download><i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;
+                                                  Introduction to SEO </a>
+                                        </div>
+                                        <div class="p-2">
+                                            <span>Lecture 2 : </span><a href="./directory/yourfile.pdf" download><i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;
+                                                  Introduction to SEO </a>
+                                        </div>
+                                        <br>
+                                    </div>
+                                    <div>
+                                        <div class="row" style="border-top: 1px solid black;">
+                                            <p>Section 3</p>
+                                        </div>
+                                        <div class="p-2">
+                                            <span>Lecture 1 : </span><a href="./directory/yourfile.pdf" download><i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;
+                                                  Introduction to SEO </a>
+                                        </div>
+                                        <div class="p-2">
+                                            <span>Lecture 2 : </span><a href="./directory/yourfile.pdf" download><i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;
+                                                  Introduction to SEO </a>
+                                        </div>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 rightbar no-gutters">
+                    <!--  -->
+                    <!-- Progress bar 1 -->
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="progress" data-value='80'>
+                                <span class="progress-left">
+                                                <span class="progress-bar border-primary"></span>
+                                </span>
+                                <span class="progress-right">
+                                                <span class="progress-bar border-primary"></span>
+                                </span>
+                                <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                                    <div class="font-weight-bold">80<sup class="small">%</sup></div>
+                                </div>
+                            </div>
+                            <!-- END -->
+                        </div>
+                        <div class="col-md-8">
+                            <div>
+                                <span><span style="font-weight: bold;">80%</span> course completed</span>
+                                <button class="btn btn-success">Get Certificate</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class=" contenedor-menu ">
+                        <!-- <a href=" " class="btnMenu ">Menu <i class="fa fa-bars "></i></a> -->
+                        <p class='sidebartitle'>Course Content </p>
+                        <div class="divScroll ">
+                            <ul class="menu ">
+                                <li><a href="# ">Section 1: Introduction to SEO<i class="fa fa-chevron-down "></i></a>
+                                    <ul>
+                                        <li><a href="# " onclick="chnageToSourceTwo() ">Sub-Element #1</a></li>
+                                        <li onclick="chnageToSourceTwo() "><a href="# ">Sub-Element #2</a></li>
+                                        <li onclick="chnageToSourceTwo() "><a href="# ">Sub-Element #3</a></li>
+                                        <li onclick="chnageToSourceTwo() "><a href="# ">Sub-Element #4</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="# ">Section 2: Introduction to SEO <i class="fa fa-chevron-down "></i></a>
+                                    <ul>
+                                        <li><a href="# ">Sub-Element #1</a></li>
+                                        <li><a href="# ">Sub-Element #2</a></li>
+                                        <li><a href="# ">Sub-Element #3</a></li>
+                                        <li><a href="# ">Sub-Element #4</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="# ">Element 3</a></li>
+                                <li><a href="# ">Element 4 <i class="fa fa-chevron-down "></i></a>
+                                    <ul>
+                                        <li><a href="# ">Sub-Element #1</a></li>
+                                        <li><a href="# ">Sub-Element #2</a></li>
+                                        <li><a href="# ">Sub-Element #3</a></li>
+                                        <li><a href="# ">Sub-Element #4</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="# ">Element 5</a></li>
+                                <li><a href="# ">Element 6</a></li>
+                                <li><a href="# ">Element 7 <i class="fa fa-chevron-down "></i></a>
+                                    <ul>
+                                        <li><a href="# ">Sub-Element #1</a></li>
+                                        <li><a href="# ">Sub-Element #2</a></li>
+                                        <li><a href="# ">Sub-Element #3</a></li>
+                                        <li><a href="# ">Sub-Element #4</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="# ">Element 8</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+            <!-- External JavaScripts -->
+            <script src="admin/assets/js/jquery.min.js "></script>
+            <script src="admin/assets/vendors/bootstrap/js/popper.min.js "></script>
+            <script src="admin/assets/vendors/bootstrap/js/bootstrap.min.js "></script>
+            <script src="admin/assets/vendors/bootstrap-select/bootstrap-select.min.js "></script>
+            <script src="admin/assets/vendors/bootstrap-touchspin/jquery.bootstrap-touchspin.js "></script>
+            <script src="admin/assets/vendors/magnific-popup/magnific-popup.js "></script>
+            <script src="admin/assets/vendors/counter/waypoints-min.js "></script>
+            <script src="admin/assets/vendors/counter/counterup.min.js "></script>
+            <script src="admin/assets/vendors/imagesloaded/imagesloaded.js "></script>
+            <script src="admin/assets/vendors/masonry/masonry.js "></script>
+            <script src="admin/assets/vendors/masonry/filter.js "></script>
+            <script src="admin/assets/vendors/owl-carousel/owl.carousel.js "></script>
+            <script src='admin/assets/vendors/scroll/scrollbar.min.js'></script>
+            <script src="admin/assets/js/functions.js "></script>
+            <script src="admin/assets/vendors/chart/chart.min.js "></script>
+            <script src="admin/assets/js/admin.js "></script>
+            <script src='admin/assets/vendors/calendar/moment.min.js'></script>
+            <script src='admin/assets/vendors/calendar/fullcalendar.js'></script>
+            <script src='admin/assets/vendors/switcher/switcher.js'></script>
+            <!-- Sidebar Accordion JS -->
+            <script src="assets/js/sidebar-accordion.js "></script>
+
+            <script>
+                $(document).ready(function() {
+
+                    $(function() {
+                        $(".progress ").each(function() {
+                            var value = $(this).attr('data-value');
+                            var left = $(this).find('.progress-left .progress-bar');
+                            var right = $(this).find('.progress-right .progress-bar');
+                            if (value > 0) {
+                                if (value <= 50) {
+                                    right.css('transform', 'rotate(' + percentageToDegrees(value) + 'deg)')
+                                } else {
+                                    right.css('transform', 'rotate(180deg)')
+                                    left.css('transform', 'rotate(' + percentageToDegrees(value - 50) + 'deg)')
+                                }
+                            }
+                        })
+
+                        function percentageToDegrees(percentage) {
+                            return percentage / 100 * 360
+                        }
+                    });
+                    $('#btnnote').click(function() {
+                        $('#note_div').hide();
+                        $('.form_note').toggle(500);
+                    });
+
+                    $('#submitnote').click(function() {
+                        $('#note_div').show();
+                        $('.form_note').hide();
+                    })
+
+                    $('#cancelnote').click(function() {
+                        $('#note_div').show();
+                        $('.form_note').hide();
+                    })
+
+
+                    function chnageToSourceTwo() {
+                        document.getElementById('source_video').src = 'public/assets/video/v2.mp4';
+                        video.load();
+                        video.play();
+                    }
+                });
+            </script>
+</body>
+
+</html>

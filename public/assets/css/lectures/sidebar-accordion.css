@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Rubik;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btnMenu {
+    display: none;
+    padding: 20px;
+    display: block;
+    background: #1abc9c;
+    color: #fff;
+}
+
+.btnMenu i.fa {
+    float: right;
+}
+
+.contenedor-menu {
+    width: 100%;
+    min-width: 300px;
+    /* margin: 50px; */
+    display: inline-block;
+    line-height: 30px;
+}
+
+.contenedor-menu .menu {
+    width: 100%;
+}
+
+.contenedor-menu ul {
+    list-style: none;
+}
+
+.contenedor-menu .menu li a {
+    color: #494949;
+    font-size: 15px;
+    font-weight: bold;
+    display: block;
+    padding: 15px 20px;
+    background: #f7f8fa;
+    border-bottom: 1px solid #dedfe0;
+}
+
+.contenedor-menu .menu li a:hover {
+    background: #d4e9ee;
+    color: #29303b;
+}
+
+.contenedor-menu .menu i.fa {
+    font-size: 12px;
+    line-height: 18px;
+    float: right;
+    margin-left: 10px;
+}
+
+.contenedor-menu .menu ul {
+    display: none;
+}
+
+.contenedor-menu .menu ul li a {
+    background: #fff;
+    /* color: black; */
+}
+
+.contenedor-menu .menu .activado>a {
+    background-color: #f7f8fa;
+    color: #4C1864;
+}
+
+.sidebartitle {
+    font-family: sf pro display, -apple-system, BlinkMacSystemFont, Roboto, segoe ui, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    border: 1px solid #dedfe0;
+    border-right: none;
+    background-color: #fff;
+}
+
+a:hover {
+    text-decoration: none;
+}

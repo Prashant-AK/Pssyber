@@ -1,0 +1,132 @@
+
+
+<div class="ttr-opened-sidebar ttr-pinned-sidebar">
+
+
+    <!--Main container start -->
+    <main>
+        <div class="container">
+            <div class="db-breadcrumb">
+                <h4 class="breadcrumb-title">Assement /Quiz</h4>
+                <ul class="db-breadcrumb-list">
+                    <li><a href="#"><i class="fa fa-home"></i>Home</a></li>
+                    <li>quiz</li>
+                </ul>
+            </div>
+            <div class="row">
+                <!-- Your Profile Views Chart -->
+                <div class="col-lg-12 m-b30">
+                    <div class="widget-box">
+                        <div class="wc-title">
+                            <h4>Welcome to Quiz</h4>
+                        </div>
+                        <div class="widget-inner">
+                            <input type="hidden" value="<%= quiz.courseid%>" id="quizID"/>
+                            <ol>
+                                
+                                <% 
+                                    let test = quiz.questions.length
+                                    for(var i=0; i<quiz.questions.length;i++) { %> 
+                                <li> <%=quiz.questions[i].question  %> </li>
+                                <input type="hidden" value="<%=test%>" id="test"/>
+                                
+                                <div class="radio">
+                                    <label><input type="radio" name="optradio<%= i %>" value="<%=quiz.questions[i].option1  %>" >  <%=quiz.questions[i].option1  %></label>
+                                </div>
+                                <div class="radio">
+                                    <label><input type="radio" name="optradio<%= i %>" value="<%=quiz.questions[i].option2  %>">  <%=quiz.questions[i].option2  %></label>
+                                </div>
+                                <div class="radio">
+                                    <label><input type="radio" name="optradio<%= i %>" value="<%=quiz.questions[i].option3  %>">  <%=quiz.questions[i].option3  %></label>
+                                </div>
+                                <div class="radio">
+                                    <label><input type="radio" name="optradio<%= i %>" value="<%=quiz.questions[i].option4  %>">  <%=quiz.questions[i].option4  %></label>
+                                </div>
+                                <hr>
+                               
+                                <% } %> 
+                            </ol>
+                            
+                            <div class="row justify-content-center">
+                                <button type="button" id="submitquiz" class="btn btn-success">Submit Quiz</button>
+                            </div>
+                            <hr>
+
+                             <div class="alert alert-success alert-dismissible fade show " id="pass" style="display: none;" role="alert">
+                                <strong>Well Done!</strong> You Successfully Passed this Exam !
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                                <a class="btn btn-success" href="/user/certificate" target="blank" id="certificate">Get Certificate</a>
+                            </div>
+                            
+                           
+
+                            <div class="alert alert-danger alert-dismissible fade show" id="fail" style="display: none;" role="alert">
+                                <strong>Sorry !</strong> Please try again ! You are not Passed
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div> 
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Your Profile Views Chart END-->
+            </div>
+        </div>
+    </main>
+    <div class="ttr-overlay"></div>
+
+    <script>
+         document.getElementById("submitquiz").addEventListener('click', (e) => {
+            e.preventDefault();
+            let count = document.getElementById('test').value;
+            let id =document.getElementById('quizID').value;
+            let correct_values = [];
+            //fetch api correct answer
+            // console.log("count"+count);
+            for(let j=0;j<count;j++){
+                // console.log(document.getElementsByName(`optradio${j}`));
+            let rates = document.getElementsByName(`optradio${j}`);
+                
+                for(var i = 0; i < rates.length; i++){
+                    // console.log(rates[i].value);
+                    if(rates[i].checked){
+                        correct_values.push(rates[i].value)
+                    }
+                }
+            }
+            fetch(`http://localhost:3000/user/checkquiz/${id}`, {
+                        method: "POST",
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ correct_values })
+                    })
+                        .then(res => res.json())
+                        .then(result => {
+                            if (result) {
+                                // console.log(result);
+                                if(result.correct*100/count>50){
+                                    $("#pass").show();
+
+                                }
+                                else{ $("#fail").show();}
+
+                                // console.log("correct ="+result.correct *count);
+                                
+
+                                // console.log("Wrong= "+result.wrong);
+                                
+                            }
+                            
+                        })
+                        .catch(err => console.log(err))
+            // console.log(correct_values);
+         });
+
+        
+    </script>
+
+</div>

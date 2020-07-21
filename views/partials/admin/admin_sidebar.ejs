@@ -1,0 +1,76 @@
+<%if(login==true) {%>
+    <%} else{%> 
+<div class="ttr-sidebar">
+    <div class="ttr-sidebar-wrapper content-scroll">
+        <!-- side menu logo start -->
+        <div class="ttr-sidebar-logo">
+            <a href="#"><img alt="" src="admin/assets/images/logo.png" width="122" height="27"></a>
+            <!-- <div class="ttr-sidebar-pin-button" title="Pin/Unpin Menu">
+                <i class="material-icons ttr-fixed-icon">gps_fixed</i>
+                <i class="material-icons ttr-not-fixed-icon">gps_not_fixed</i>
+            </div> -->
+            <div class="ttr-sidebar-toggle-button">
+                <i class="ti-arrow-left"></i>
+            </div>
+        </div>
+        <!-- side menu logo end -->
+        <!-- sidebar menu start -->
+        <nav class="ttr-sidebar-navi">
+            <ul>
+                <li>
+                    <a href="/admin/dashboard" class="ttr-material-button">
+                        <span class="ttr-icon"><i class="ti-home"></i></span>
+                        <span class="ttr-label">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/admin/approve-course" class="ttr-material-button">
+                        <span class="ttr-icon"><i class="ti-book"></i></span>
+                        <span class="ttr-label">Approve Courses</span>
+                    </a>
+                </li>
+                <!-- <li>
+                    <a href="#" class="ttr-material-button">
+                        <span class="ttr-icon"><i class="ti-email"></i></span>
+                        <span class="ttr-label">Messages</span>
+                    </a>
+                </li> -->
+                <li>
+                    <a href="/admin/add-course" class="ttr-material-button">
+                        <span class="ttr-icon"><i class="ti-calendar"></i></span>
+                        <span class="ttr-label">Add Course</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/admin/add-live-class" class="ttr-material-button">
+                        <span class="ttr-icon"><i class="ti-bookmark-alt"></i></span>
+                        <span class="ttr-label">Add Live Class</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/admin/add-blog" class="ttr-material-button">
+                        <span class="ttr-icon"><i class="ti-layout-accordion-list"></i></span>
+                        <span class="ttr-label">Add Blog</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/admin/add-quiz" class="ttr-material-button">
+                        <span class="ttr-icon"><i class="ti-layout-slider"></i></span>
+                        <span class="ttr-label">Add Quiz</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#" class="ttr-material-button">
+                        <span class="ttr-icon"><i class="ti-settings"></i></span>
+                        <span class="ttr-label">Settings</span>
+                    </a>
+                </li>
+                <li class="ttr-seperate"></li>
+            </ul>
+            <!-- sidebar menu end -->
+        </nav>
+        <!-- sidebar menu end -->
+    </div>
+</div>
+<%}%>

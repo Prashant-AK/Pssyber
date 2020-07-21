@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from Studeebee.themetrades.com/demo/admin/bookmark.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 29 May 2019 08:28:56 GMT -->
+
+<head>
+
+	<!-- META ============================================= -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+	<meta name="robots" content="" />
+
+	<!-- DESCRIPTION -->
+	<meta name="description" content="Studeebee : Education HTML Template" />
+
+	<!-- OG -->
+	<meta property="og:title" content="Studeebee : Education HTML Template" />
+	<meta property="og:description" content="Studeebee : Education HTML Template" />
+	<meta property="og:image" content="" />
+	<meta name="format-detection" content="telephone=no">
+
+	<!-- FAVICONS ICON ============================================= -->
+	<link rel="icon" href="../error-404.html" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/x-icon" href="admin/assets/images/favicon.png" />
+
+	<!-- PAGE TITLE HERE ============================================= -->
+	<title>Studeebee : Education HTML Template </title>
+
+	<!-- MOBILE SPECIFIC ============================================= -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--[if lt IE 9]>
+	<script src="admin/assets/js/html5shiv.min.js"></script>
+	<script src="admin/assets/js/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- All PLUGINS CSS ============================================= -->
+	<link rel="stylesheet" type="text/css" href="admin/assets/css/assets.css">
+	<link rel="stylesheet" type="text/css" href="admin/assets/vendors/calendar/fullcalendar.css">
+
+	<!-- TYPOGRAPHY ============================================= -->
+	<link rel="stylesheet" type="text/css" href="admin/assets/css/typography.css">
+
+	<!-- SHORTCODES ============================================= -->
+	<link rel="stylesheet" type="text/css" href="admin/assets/css/shortcodes/shortcodes.css">
+
+	<!-- STYLESHEETS ============================================= -->
+	<link rel="stylesheet" type="text/css" href="admin/assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="admin/assets/css/dashboard.css">
+	<link class="skin" rel="stylesheet" type="text/css" href="admin/assets/css/color/color-1.css">
+
+</head>
+
+<body class="ttr-opened-sidebar ttr-pinned-sidebar">
+
+	<!-- header start -->
+	<%- include('../partials/user/user_nav'); -%>
+	<!-- header end -->
+	<!-- Left sidebar menu start -->
+	<%- include('../partials/user/user_sidebar'); -%>
+	<!-- Left sidebar menu end -->
+
+	<!--Main container start -->
+	<main class="ttr-wrapper">
+		<div class="container-fluid">
+			<div class="db-breadcrumb">
+				<h4 class="breadcrumb-title">WishList</h4>
+				<ul class="db-breadcrumb-list">
+					<li><a href="/home"><i class="fa fa-home"></i>Home</a></li>
+					<li>WishList</li>
+				</ul>
+			</div>
+			<div class="row">
+				<!-- Your Profile Views Chart -->
+				<div class="col-lg-12 m-b30">
+					<div class="widget-box">
+						<div class="wc-title">
+							<%if(course.length<=0 || course.length===undefined){%>
+							<p style="opacity:0.5">No courses to show</p>
+							<%}%>
+						</div>
+						<%course.forEach((item)=>{%>
+							<div class="widget-inner">
+								<div class="card-courses-list bookmarks-bx">
+									<div class="card-courses-media" style="width: 300px; height: 200px;" >
+										<img src="<%=item.thumbnail%>" alt="<%=item.title%>" style="object-fit: contain; object-position: center;" />
+									</div>
+									<div class="card-courses-full-dec">
+										<div class="card-courses-title">
+											<h4 class="m-b5"><%=item.title%></h4>
+										</div>
+										<div class="card-courses-list-bx">
+											<ul class="card-courses-view">
+												<li class="card-courses-categories">
+													<h5>Category</h5>
+													<h4><%=item.category%></h4>
+												</li>
+												<li class="card-courses-review">
+													<h5>3 Review</h5>
+													<ul class="cours-star">
+														<li class="active"><i class="fa fa-star"></i></li>
+														<li class="active"><i class="fa fa-star"></i></li>
+														<li class="active"><i class="fa fa-star"></i></li>
+														<li><i class="fa fa-star"></i></li>
+														<li><i class="fa fa-star"></i></li>
+													</ul>
+												</li>
+												<li class="card-courses-price">
+													<del>&#8377;<%=item.price%></del>
+													<h5 class="text-primary m-b0">
+														&#8377;<%=Math.floor(item.price - (item.discount / 100) * item.price)%>
+													</h5>
+												</li>
+											</ul>
+										</div>
+										<div class="row card-courses-dec">
+											<div class="col-md-12">
+												<p><%=(item.description).substring(0,170)+'...'%></p>
+											</div>
+											<div class="col-md-12">
+												<a href="/courses/<%=(item.title).toLowerCase().replace(/ /g,'-')%>/<%=item._id%>" class="btn radius-xl">View Courses</a>
+												<a href="#" class="btn red outline radius-xl ">Remove</a>
+											</div>
+										</div>
+
+									</div>
+								</div>
+
+							</div>
+							<%})%>
+						</div>
+					</div>
+					<!-- Your Profile Views Chart END-->
+				</div>
+			</div>
+	</main>
+	<div class="ttr-overlay"></div>
+
+	<!-- External JavaScripts -->
+	<script src="admin/assets/js/jquery.min.js"></script>
+	<script src="admin/assets/vendors/bootstrap/js/popper.min.js"></script>
+	<script src="admin/assets/vendors/bootstrap/js/bootstrap.min.js"></script>
+	<script src="admin/assets/vendors/bootstrap-select/bootstrap-select.min.js"></script>
+	<script src="admin/assets/vendors/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script>
+	<script src="admin/assets/vendors/magnific-popup/magnific-popup.js"></script>
+	<script src="admin/assets/vendors/counter/waypoints-min.js"></script>
+	<script src="admin/assets/vendors/counter/counterup.min.js"></script>
+	<script src="admin/assets/vendors/imagesloaded/imagesloaded.js"></script>
+	<script src="admin/assets/vendors/masonry/masonry.js"></script>
+	<script src="admin/assets/vendors/masonry/filter.js"></script>
+	<script src="admin/assets/vendors/owl-carousel/owl.carousel.js"></script>
+	<script src='admin/assets/vendors/scroll/scrollbar.min.js'></script>
+	<script src="admin/assets/js/functions.js"></script>
+	<script src="admin/assets/vendors/chart/chart.min.js"></script>
+	<script src="admin/assets/js/admin.js"></script>
+	<script src='admin/assets/vendors/switcher/switcher.js'></script>
+</body>
+
+<!-- Mirrored from educhamp.themetrades.com/demo/admin/bookmark.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 29 May 2019 08:30:07 GMT -->
+
+</html>

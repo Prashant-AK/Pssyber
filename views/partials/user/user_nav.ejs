@@ -1,0 +1,82 @@
+<header class="ttr-header" style="background: #29303B;">
+    <div class="ttr-header-wrapper">
+        <!--sidebar menu toggler start -->
+        <div class="ttr-toggle-sidebar ttr-material-button">
+            <i class="ti-close ttr-open-icon"></i>
+            <i class="ti-menu ttr-close-icon"></i>
+        </div>
+        <!--sidebar menu toggler end -->
+        <!--logo start -->
+        <!-- <div class="ttr-logo-box">
+            <div>
+                <a href="/home" class="ttr-logo">
+                    <img alt="" class="ttr-logo-mobile" src="admin/assets/images/logo.png" width="30" height="30">
+                </a>
+            </div>
+        </div> -->
+        <!--logo end -->
+        <div class="ttr-header-menu">
+            <!-- header left menu start -->
+            <ul class="ttr-header-navigation">
+                <li>
+                    <a href="/home" class="ttr-material-button ttr-submenu-toggle">HOME</a>
+                </li>
+                <li>
+                    <a href="#" class="ttr-material-button ttr-submenu-toggle">QUICK MENU <i
+                            class="fa fa-angle-down"></i></a>
+                    <div class="ttr-header-submenu">
+                        <ul>
+                            <li><a href="/courses">Explore Courses</a></li>
+                            <li><a href="/events">Explore Events</a></li>
+                            <li><a href="/membership">Become a Member</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <!-- header left menu end -->
+        </div>
+        <div class="ttr-header-right ttr-with-seperator">
+            <!-- header right menu start -->
+            <ul class="ttr-header-navigation">
+                <li>
+                    <a href="#" class="ttr-material-button ttr-submenu-toggle"><i class="fa fa-bell"></i></a>
+                    <div class="ttr-header-submenu noti-menu">
+                        <div class="ttr-notify-header">
+                            <span class="ttr-notify-text-top">9 New</span>
+                            <span class="ttr-notify-text">User Notifications</span>
+                        </div>
+                        <%- include('./user_notification'); -%>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="ttr-material-button ttr-submenu-toggle"><span class="ttr-user-avatar"><img src="admin/assets/images/prof.jpg"style="                                    
+                        height: 100%;
+                        width: 121%;" alt=""/></span></a>
+                    <div class="ttr-header-submenu">
+                        <ul>
+                            <li><a href="/user/profile">My profile</a></li>
+                            <li><a href="/user/messages">Messages</a></li>
+                            <li><a href="/user/logout">Logout</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <!-- header right menu end -->
+        </div>
+        <!-- No Need for User -->
+        <!--header search panel start -->
+        <!-- <div class="ttr-search-bar">
+            <form class="ttr-search-form">
+                <div class="ttr-search-input-wrapper">
+                    <input type="text" name="qq" placeholder="search something..." class="ttr-search-input">
+                    <button type="submit" name="search" class="ttr-search-submit"><i
+                            class="ti-arrow-right"></i></button>
+                </div>
+                <span class="ttr-search-close ttr-search-toggle">
+                    <i class="ti-close"></i>
+                </span>
+            </form>
+        </div> -->
+        <!--header search panel end -->
+    </div>
+</header>

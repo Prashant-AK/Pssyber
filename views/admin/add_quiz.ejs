@@ -1,0 +1,230 @@
+<!--Main container start -->
+<main class="ttr-wrapper">
+    <div class="container-fluid">
+        <div class="db-breadcrumb">
+            <h4 class="breadcrumb-title">Create Quiz</h4>
+            <ul class="db-breadcrumb-list">
+                <li><a href="#"><i class="fa fa-home"></i>Home</a></li>
+                <li>Add Quiz</li>
+            </ul>
+        </div>
+        <div class="row">
+            <!-- Your Profile Views Chart -->
+            <div class="col-lg-12 m-b30">
+                <div class="widget-box">
+                    <div class="widget-inner">
+                        <!-- <form class="edit-profile m-b30" action="/admin/add-quiz" method="POST" type="file" > -->
+                        <form class="edit-profile m-b30">
+                            <h3>Quiz Details</h3>
+                            <div>
+                                <label class="col-form-label">Course Title</label>
+                                <select name="course_id" id="course_id" class="form-control">
+
+                                    <option selected>--Select Title--</option>
+                                    <% for( var i=0;i<title.length;i++) {%>
+                                    <option value="<%=title[i].id%>"><%=title[i].title%></option>
+                                    <%}%>
+                                            
+                                        </select>
+                                    </div>
+    
+                                        <div class="row">
+                                            
+                                            <div class="form-group col-6">
+                                                <label class="col-form-label">Quiz title</label>
+                                                <div>
+                                                    <input class="form-control" type="text" value="" id="quiz_title" name="quiz_title" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group col-6">
+                                                <label class="col-form-label">Instructor Name</label>
+                                                <div>
+                                                    <input class="form-control" type="text" value="" name="instructor_name" id="instructor_name" required>
+                                                </div>
+                                            </div>
+                                            <div class="seperator"></div>
+
+                                        
+
+                    <div class="form-group col-12">
+                        <label class="col-form-label">Quiz Description</label>
+                        <div>
+                            <textarea class="form-control" name="quiz_description" id="quiz_description"> </textarea>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- <div id="textboxDiv"></div> -->
+                <div class="row">
+                    <div class="col-4">
+                        <h3>Add Questions</h3>
+                    </div>
+                </div>
+
+                <table id="queanscontent" style="width: 100%;">
+                    <tr class="question-item">
+                        <td>
+                            <div class="row" style="border-top: black solid 2px;">
+                                <div class="form-group col-12">
+                                    <label class="col-form-label">Question</label>
+                                    <div>
+                                        <textarea style="height: 45px;" class="form-control question"
+                                            placeholder="Write your question" name="question"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <label class="col-sm-2 col-form-label">Option A</label>
+
+                                    <div class="col-sm-10">
+                                        <textarea style="height: 45px;" class="form-control Option1"
+                                            placeholder="Option A" name="Option1"></textarea>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <label class="col-sm-2 col-form-label">Option B</label>
+
+                                    <div class="col-sm-10">
+                                        <textarea style="height: 45px;" class="form-control Option2"
+                                            placeholder="Option B" name="Option2"></textarea>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <label class="col-sm-2 col-form-label">Option C</label>
+
+                                    <div class="col-sm-10">
+                                        <textarea style="height: 45px;" class="form-control Option3"
+                                            placeholder="Option C" name="Option3"></textarea>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <label class="col-sm-2 col-form-label">Option D</label>
+
+                                    <div class="col-sm-10">
+                                        <textarea style="height: 45px;" class="form-control Option4"
+                                            placeholder="Option D" name="Option4"></textarea>
+                                    </div>
+
+                                </div>
+                                <br>
+
+                                <span class="col-form-label"></span>
+                                <p>Choose Correct Answer:</p>
+                                <div class="row">
+                                    
+                                    <div class="col-md-3">
+                                        <input type="text" id="answer" class="form-control name" name="answer" placeholder="Correct Answer">
+                                       
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label class="col-form-label" style="font-weight: bold;">Cancel
+                                            Question</label>
+                                        <a class="delete" href="#"><i class="fa fa-close"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="col-12">
+                    <button type="button" class="btn-secondry add-question m-r5"><i
+                            class="fa fa-fw fa-plus-circle"></i>Add Question</button>
+
+                </div>
+                <br />
+                <div class="col-12">
+                    <button type="button" id="btn1" class="btn btn-success btn-lg btn-block m-r5">Create Quiz
+                    </button>
+                </div>
+                </form>
+            </div>
+            <script>
+                document.getElementById("btn1").addEventListener('click', () => {
+                    let courseid = document.getElementById("course_id").value;
+                    let quiz_title = document.getElementById("quiz_title").value;
+                    let quiz_description = document.getElementById("quiz_description").value;
+                    let instructor_name = document.getElementById("instructor_name").value;
+                    let question = document.getElementsByClassName("question");
+                    let option1 = document.getElementsByClassName("Option1");
+                    let option2 = document.getElementsByClassName("Option2");
+                    let option3 = document.getElementsByClassName("Option3");
+                    let option4 = document.getElementsByClassName("Option4");
+                    let Answer = document.getElementsByClassName("answer");
+                    
+
+                    let question_array = []
+                    for (let i = 0; i < question.length; i++) {
+                        question_array.push({ question: question[i].value, option1: option1[i].value, option2: option2[i].value, option3: option3[i].value, option4: option4[i].value, Answer: answer[i].value })
+                    }
+                    console.log(question_array);
+                    fetch("http://localhost:3000/admin/add-quiz", {
+                        method: "POST",
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ question_array, courseid, quiz_title, quiz_description, instructor_name })
+                    })
+                        .then(res => res.json())
+                        .then(result => {
+                            if (result) {
+                                window.location.href = "http://localhost:3000/admin/add-quiz";
+                            }
+                        })
+                        .catch(err => console.log(err))
+                })
+            </script>
+        </div>
+    </div>
+    </div>
+    <!-- Your Profile Views Chart END-->
+    </div>
+
+</main>
+<div class="ttr-overlay"></div>
+
+<!-- External JavaScripts -->
+<script src="admin/assets/js/jquery.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        // $("#queanscontent").hide();
+        var txtbox = '<tr><td><input type="text"/></td></td>';
+        $("#addquestions").on("click", function (btn) {
+            // $("#textboxDiv").append("<br><input type='text'/><br>");
+            $(btn).closest('div').append(txtbox);
+        });
+        $("#Remove").on("click", function () {
+            $("#textboxDiv").children().last().remove();
+        });
+
+        $("#addquestions").on("click", function () {
+            //write logic for add all questions to array and clear the filed
+
+        });
+    });
+
+    function newMenuItem() {
+        var newElem = $('tr.question-item').first().clone();
+        newElem.find('textarea').val('');
+        newElem.appendTo('table#queanscontent');
+    }
+    if ($("table#queanscontent").is('*')) {
+        $('.add-question').on('click', function (e) {
+            e.preventDefault();
+            newMenuItem();
+            alert("Question Added")
+        });
+        $(document).on("click", "#queanscontent .delete", function (e) {
+            e.preventDefault();
+            $(this).parent().parent().parent().parent().remove();
+        });
+    }
+</script>
